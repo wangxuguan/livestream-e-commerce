@@ -1,22 +1,19 @@
-﻿using Month12.Dto;
+﻿using month12.RBAC;
 using Month12.DtoValidatable;
-using Month12.DtoView;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
 namespace Month12.IService
 {
-    public interface IRoleModelService: ICrudAppService<
-        RoleModelDto,
+    public interface IMenuModelService: ICrudAppService<
+        MenuModelDto,
         Guid,
         PagedAndSortedResultRequestDto,
-        CreateUpdateRoleModelDto
+        CreateUpdateMenuModelDto
         >
     {
-        Task<List<RoleModelView>> Query();
     }
 }

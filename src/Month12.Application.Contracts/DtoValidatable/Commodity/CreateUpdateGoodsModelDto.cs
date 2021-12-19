@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
-using System.Threading.Tasks;
-using Volo.Abp.Domain.Entities.Auditing;
 
-namespace month12.Commodity
+namespace Month12.DtoValidatable.Commodity
 {
-    public class GoodsModel : AuditedAggregateRoot<Guid>
+    public class CreateUpdateGoodsModelDto
     {
+        [Required]
         public string GoodsName { get; set; }//商品名称
-        public string GoodPrice { get; set; }//商品价格
+        [Required]
+        public decimal GoodPrice { get; set; }//商品价格
+        [Required]
         public string GoodMessAge { get; set; }//商品描述
-        public string Images { get; set; }   //商品图片
         public int GoodNum { get; set; }//商品库存
+        [Required]
         public bool GoodState { get; set; }//商品状态
         public DateTime CreateDate { get; set; }//创建时间
     }

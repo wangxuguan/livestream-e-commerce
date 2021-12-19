@@ -9,7 +9,8 @@ namespace month12.RBAC
 {
     public class MenuModelDto : AuditedEntityDto<Guid>
     {
-        public Guid FatherId { get; set; }//父级id
+        public Guid? FatherId { get; set; }//父级id
+        public string Url { get; set; }
         public string MenuName { get; set; }//权限名称
         public string MenuMessage { get; set; }//权限描述
     }

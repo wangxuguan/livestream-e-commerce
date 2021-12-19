@@ -10,9 +10,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Month12.Domain\Month12.Domain.csproj" />
     <ProjectReference Include="..\Month12.Application.Contracts\Month12.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Month12.EntityFrameworkCore\Month12.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.32" />
+    <PackageReference Include="NLog" Version="4.7.13" />
+    <PackageReference Include="Qiniu" Version="8.0.0" />
     <PackageReference Include="Volo.Abp.Account.Application" Version="4.4.4" />
     <PackageReference Include="Volo.Abp.Identity.Application" Version="4.4.4" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.4.4" />

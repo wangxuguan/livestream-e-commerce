@@ -97,74 +97,7 @@ namespace Month12.EntityFrameworkCore
 
             /* Configure your own tables/entities inside here */
 
-            builder.Entity<LogModel>(b =>
-            {
-                b.ToTable("LogModel");
-            });
-            builder.Entity<MenuModel>(b =>
-            {
-                b.ToTable("MenuModel");
-            });
-            builder.Entity<OrganizationModel>(b =>
-            {
-                b.ToTable("OrganizationModel");
-            });
-            builder.Entity<RoleMenuModel>(b =>
-            {
-                b.ToTable("RoleMenuModel");
-            });
-            builder.Entity<RoleModel>(b =>
-            {
-                b.ToTable("RoleModel");
-            });
-            builder.Entity<UserModel>(b =>
-            {
-                b.ToTable("UserModel");
-            });
-            builder.Entity<UserRoleModel>(b =>
-            {
-                b.ToTable("UserRoleModel");
-            });
-            builder.Entity<GoodsImgModel>(b =>
-            {
-                b.ToTable("GoodsImgModel");
-            });
-            builder.Entity<GoodsModel>(b =>
-            {
-                b.ToTable("GoodsModel");
-            });
-            builder.Entity<GoodsSpecificationModel>(b =>
-            {
-                b.ToTable("GoodsSpecificationModel");
-            });
-            builder.Entity<GoodsTypeModel>(b =>
-            {
-                b.ToTable("GoodsTypeModel");
-            });
-            builder.Entity<ImgModel>(b =>
-            {
-                b.ToTable("ImgModel");
-            });
-            builder.Entity<IndentDetailModel>(b =>
-            {
-                b.ToTable("IndentDetailModel");
-            });
-            builder.Entity<IndentModel>(b =>
-            {
-                b.ToTable("IndentModel");
-            });
-            builder.Entity<SiteModel>(b =>
-            {
-                b.ToTable("SiteModel");
-            });
-            builder.Entity<SpecificationModel>(b =>
-            {
-                b.ToTable("SpecificationModel");
-            });
-            builder.Entity<UserImgModel>(b =>
-            {
-                b.ToTable("UserImgModel");
-            });
+            
         }
     }
 }

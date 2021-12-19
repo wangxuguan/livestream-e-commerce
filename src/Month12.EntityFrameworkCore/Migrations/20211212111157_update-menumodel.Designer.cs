@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Month12.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
@@ -10,15 +11,16 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Month12.Migrations
 {
     [DbContext(typeof(Month12DbContext))]
-    partial class Month12DbContextModelSnapshot : ModelSnapshot
+    [Migration("20211212111157_update-menumodel")]
+    partial class updatemenumodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("_Abp_DatabaseProvider", EfCoreDatabaseProvider.SqlServer)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.13")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Volo.Abp.AuditLogging.AuditLog", b =>
@@ -2002,16 +2004,13 @@ namespace Month12.Migrations
                     b.Property<int>("GoodNum")
                         .HasColumnType("int");
 
-                    b.Property<string>("GoodPrice")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("GoodPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("GoodState")
                         .HasColumnType("bit");
 
                     b.Property<string>("GoodsName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Images")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("LastModificationTime")
